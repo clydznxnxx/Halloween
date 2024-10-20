@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration for Halloween Ride!</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Creepster', cursive; /* You can link this font from Google Fonts */
+            background-image: url('https://example.com/creepy-background.jpg'); /* Add a scary background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 4px 4px 10px #ff0000;
+            color: #ff0000;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+        label {
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 2px 2px 4px #ff0000;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: darkred;
+        }
+        footer {
+            margin-top: 50px;
+            color: #ff0000;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Haunted Ride Registration</h1>
+    <form action="submit_registration.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="bike">Bike Type:</label>
+        <select id="bike" name="bike" required>
+            <option value="fixie">Fixie</option>
+            <option value="mtb">MTB</option>
+            <option value="rb">Road Bike</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <input type="submit" value="Join the Ride... if you dare">
+    </form>
+    <footer>
+        <p>Made by Crucifixed Team</p>
+    </footer>
+</body>
+</html>
